@@ -1,0 +1,19 @@
+{
+  "name": "p3_muyombotshibola_falonne",
+  "version": "1.0.0",
+  "description": "Mon projet trois ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfalonne/muyombotshibolafalonne_3_10012022.git"
+  },
+  "author": "falonne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfalonne/muyombotshibolafalonne_3_10012022/issues"
+  },
+  "homepage": "https://github.com/mfalonne/muyombotshibolafalonne_3_10012022#readme"
+}
