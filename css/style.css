@@ -1,3 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*mobile*/
+@media screen and (max-width: 767px) {
+  #header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 5px 5px 15px #aaa;
+  }
+  #header_logo img {
+    margin: 30px auto 20px;
+    width: 250px;
+    text-align: center;
+  }
+
+  .city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: #f3f3f3;
+    padding: 20px;
+  }
+  .city .city_icon {
+    font-size: 25px;
+  }
+  .city .city_text {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .reservation {
+    padding: 20px;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  .reservation .reservation_btn {
+    background-image: linear-gradient(to left, #9356DC, #FF79DA);
+    font-weight: 500;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 5px 5px 15px #aaa;
+    transition-duration: 0.25s;
+  }
+  .reservation .reservation_btn:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  .tuto {
+    counter-reset: steps;
+  }
+  .tuto .tuto_title {
+    padding-left: 20px;
+  }
+  .tuto .tuto_steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+  }
+  .tuto .tuto_step {
+    position: relative;
+    list-style-type: none;
+    background-color: #fafafa;
+    border-radius: 25px;
+    width: 93%;
+    transition-duration: 0.25s;
+    padding: 26px;
+    gap: 50px;
+    box-shadow: 5px 5px 15px #aaa;
+  }
+  .tuto .tuto_step::before {
+    content: counter(steps);
+    counter-increment: steps;
+    background-color: #9356DC;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: small;
+    position: absolute;
+    left: -2px;
+  }
+  .tuto .tuto_step:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    color: #9356DC;
+  }
+  .tuto .tuto_icon {
+    margin: 3px 9px;
+    color: #7e7e7e;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
