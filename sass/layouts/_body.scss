@@ -1,0 +1,139 @@
+/*paris,belleville */
+.city{
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 20px;
+    & .city_icon{
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    & .city__text{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+/* bouton explorer*/ 
+.explorer{
+    text-align: center;
+    & .explorer__btn{
+        background-image: linear-gradient(to left, $colour-primary, $colour-secondary);
+        font-weight: 700;
+        font-size: 15px;
+        padding: 13px 30px;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        @include base-shadow; 
+        transition-duration: 0.20s;
+        &:hover{
+            @include zoom;
+            cursor: pointer;
+            opacity: 0.9;
+        } 
+
+    }
+}
+/*Fonctionnement*/ 
+.tuto{
+    counter-reset: steps;
+    & .tuto__title{
+        padding-left: 50px;
+    }
+    & .tuto__steps{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        & .tuto__step{
+            position: relative;
+            background-color: #f6f6f6;
+            padding: 15px 25px;
+            border-radius: 25px;
+            list-style-type: none;
+            flex-grow: 1;
+            margin: 10px auto;
+            transition-duration: 0.25s;
+            @include base-shadow;
+            &::before{
+                content: counter(steps);
+                counter-increment: steps;
+                background-color: $colour-primary;
+                color: #fff;;
+                border-radius: 50%;
+                padding: 5px 8px;
+                font-size: small;
+                position: absolute;
+                left: -3px;    
+            }
+            &:hover{
+                @include zoom;
+                cursor: pointer;
+            }
+            & .tuto__icon{
+                margin: 3px 15px;
+                color:  #7e7e7e;
+            } 
+        }
+    }
+}
+/*Restaurant*/
+.restaurants{
+    background-color:#f6f6f6;
+    & .restaurants_title{
+        padding-left: 20px;
+    }
+    & .cards{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        flex-basis:50%;
+        & .card{
+            position: relative;
+            background-color: white;
+            border-radius: 25px;
+            width: 48%;
+            height: 250px;
+            margin: auto;
+            text-decoration: none;
+            color: inherit;
+            & img{
+                width: 100%;
+                height: 170px;
+                border-radius: 25px 25px 0 0;
+                object-fit: cover;
+            }
+            & h3,p{
+                padding-left: 20px;
+                margin: 10px;
+            }
+            & i.far{
+                position: absolute;
+                left: 270px;
+                top: 200px;
+            }
+        }
+    }
+    & .card--new{
+        position: relative;
+        & .new{
+            background-color: $colour-tertiary;
+            padding: 5px 10px;
+            position: absolute;
+            left: 222px;
+            top: 25px;
+            color: #1b6150;
+        }
+    }
+
+} 
+@media screen and (max-width:767px){
+    .container{
+        width: 100%;
+        margin: auto;
+        & .tuto__steps{
+            padding-left: 0;
+            flex-direction: column;
+        } 
+    }
+        
+}

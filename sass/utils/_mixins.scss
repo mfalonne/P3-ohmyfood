@@ -1,7 +1,7 @@
 @mixin zoom {
-    transform: scale(1.03);    
+    transform: scale(1.01);    
 }
-@mixin box-shadow {
-    box-shadow: 5px 5px 15px #aaa; 
+@mixin base-shadow {
+    box-shadow: 2px 1px 16px -3px black; 
     
 }

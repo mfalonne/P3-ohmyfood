@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.logo {
+  font-family: "Shrikhand", "cursive";
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  box-shadow: 0 3px 3px lightgrey;
+  padding: 7px;
+  position: relative;
+}
+header .header__logo {
+  text-align: center;
+}
+
+/*mobile*/
+@media screen and (max-width: 767px) {
+  header {
+    padding-bottom: 3px;
+  }
+}
+/*paris,belleville */
+.city {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+}
+.city .city_icon {
+  font-size: 20px;
+  padding: 0 10px;
+}
+.city .city__text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* bouton explorer*/
+.explorer {
+  text-align: center;
+}
+.explorer .explorer__btn {
+  background-image: linear-gradient(to left, #9356DC, #FF79DA);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 2px 1px 16px -3px black;
+  transition-duration: 0.2s;
+}
+.explorer .explorer__btn:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/*Fonctionnement*/
+.tuto {
+  counter-reset: steps;
+}
+.tuto .tuto__title {
+  padding-left: 50px;
+}
+.tuto .tuto__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.tuto .tuto__steps .tuto__step {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 15px 25px;
+  border-radius: 25px;
+  list-style-type: none;
+  flex-grow: 1;
+  margin: 10px auto;
+  transition-duration: 0.25s;
+  box-shadow: 2px 1px 16px -3px black;
+}
+.tuto .tuto__steps .tuto__step::before {
+  content: counter(steps);
+  counter-increment: steps;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: small;
+  position: absolute;
+  left: -3px;
+}
+.tuto .tuto__steps .tuto__step:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+.tuto .tuto__steps .tuto__step .tuto__icon {
+  margin: 3px 15px;
+  color: #7e7e7e;
+}
+
+/*Restaurant*/
+.restaurants {
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+.restaurants .restaurants_title {
+  padding-left: 20px;
+}
+.restaurants .cards {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  gap: 15px;
+}
+.restaurants .card {
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  width: 85%;
+  height: 250px;
+  margin: auto;
+  text-decoration: none;
+  color: inherit;
+}
+.restaurants .card img {
+  width: 100%;
+  height: 170px;
+  border-radius: 25px 25px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants .card h3, .restaurants .card p {
+  padding-left: 20px;
+  margin: 10px;
+}
+.restaurants .card i.far {
+  position: absolute;
+  left: 270px;
+  top: 200px;
+}
+.restaurants .card--new {
+  position: relative;
+}
+.restaurants .card--new .new {
+  background-color: #99E2D0;
+  padding: 5px 10px;
+  position: absolute;
+  left: 222px;
+  top: 25px;
+  color: #1b6150;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .container .tuto__steps {
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+.footer {
+  background-color: #353535;
+  color: white;
+}
+.footer #footer__logo {
+  font-family: "Shrikhand", "cursive";
+  padding-left: 38px;
+}
+.footer .footer__list {
+  list-style: none;
+}
+.footer .footer__list .footer__listElt {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*mobile*//*# sourceMappingURL=main.css.map */
