@@ -2,6 +2,7 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+@import "./utils/animationcheck";
 @import "./base/base";
 @import "./base/typography";
 @import "./components/buttons";
@@ -12,6 +13,5 @@
 @import "./layouts/container";
 @import "./layouts/form";
 @import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+@import "./pages/restaurant";
 @import "media";

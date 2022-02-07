@@ -1,20 +1,11 @@
 .footer{
     background-color: #353535;
     color: white;
-    & #footer__logo{
-        font-family: "Shrikhand","cursive";
-        padding-left: 38px;
-    }
+    padding: 20px 0;
+    font-size: 18px;
     & .footer__list{
-        list-style: none;
-        & .footer__listElt{
-            color: inherit;
-            text-decoration: none;
-        }
+        list-style-type: none;
+        padding-left: 0px;
     
-    }
-   
-}
-@media screen and (max-width: 767px){
-
+    }   
 }
