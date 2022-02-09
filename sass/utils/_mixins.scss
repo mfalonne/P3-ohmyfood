@@ -8,7 +8,7 @@
     color: white;
     @include base-shadow;
     @include color-gradient; 
-    transition-duration: 0.25s  
+    transition: all 0.25s; 
 }
     
 @mixin zoom {

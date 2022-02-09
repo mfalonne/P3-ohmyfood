@@ -1,1 +1,12 @@
 /*mobile*/
+@media screen and (max-width:767px){
+    .container{
+        width: 100%;
+        margin: auto;
+        & .tuto__steps{
+            padding-left: 0;
+            flex-direction: column;
+        } 
+    }
+        
+}

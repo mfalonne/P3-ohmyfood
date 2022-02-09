@@ -22,6 +22,7 @@
         &:hover{
             @include zoom;
             cursor: pointer;
+            box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
             opacity: 0.9;
         } 
 
@@ -36,6 +37,14 @@
         justify-content: center;
         gap: 20px;
         padding-left: 0px;
+        @media screen and (max-width:767px){
+            padding-left: 0;
+            flex-direction: column;
+        }
+        @media screen and (max-width:991px){
+            flex-direction: column;
+            
+        }
         & .tuto__step{
             position: relative;
             background-color: #f6f6f6;
@@ -46,6 +55,13 @@
             margin: 10px auto;
             transition-duration: 0.25s;
             @include base-shadow;
+            @media screen and (max-width:991px){
+                width: 90%;
+                margin: auto;
+            }
+            @media screen and (min-width:992px) and (max-width:1024px){
+                margin: 10px 12px;
+            }
             &::before{
                 content: counter(steps);
                 counter-increment: steps;
@@ -80,6 +96,9 @@
         flex-wrap: wrap;
         gap: 25px;
         flex-basis:50%;
+        @media screen and (min-width:768px) and (max-width:991px){
+            margin: 19px;
+        }
         & .card{
             position: relative;
             background-color: white;
@@ -87,6 +106,13 @@
             width: 48%;
             height: 250px;
             margin: auto;
+            @media screen and (max-width:991px){
+                width: 100%;
+                margin: 10px 20px;
+            }
+            @media screen and (min-width:992px) and (max-width:1024px){
+                padding: 0 10px;
+            }
             & img{
                 width: 100%;
                 height: 170px;
@@ -109,18 +135,19 @@
             left: 468px;
             top: 25px;
             color: #1b6150;
+            @media screen and (max-width:375px){
+                left: 192px;
+            }
+            @media screen and (min-width:376px) and(max-width:767px){
+                left: 289px;
+            }
+            @media screen and (min-width:768px) and (max-width:991px){
+                left: 564px;
+            }
+            @media screen and (min-width:992px) and (max-width:1024px){
+                left: 389px;
+            }
         }
     }
 
 } 
-@media screen and (max-width:767px){
-    .container{
-        width: 100%;
-        margin: auto;
-        & .tuto__steps{
-            padding-left: 0;
-            flex-direction: column;
-        } 
-    }
-        
-}
