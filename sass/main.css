@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Shrikhand&display=swap");
 @-webkit-keyframes check {
   0% {
-    transform: rotate(-270);
+    transform: rotate(-270deg);
   }
   100% {
     transform: rotate(0);
@@ -11,10 +11,52 @@
 }
 @keyframes check {
   0% {
-    transform: rotate(-270);
+    transform: rotate(-270deg);
   }
   100% {
     transform: rotate(0);
+  }
+}
+@-webkit-keyframes submenu-animated {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes submenu-animated {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 * {
@@ -56,8 +98,30 @@ header .header__logo {
     padding-bottom: 3px;
   }
 }
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  -webkit-animation: loader 200ms 3s forwards;
+          animation: loader 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader i {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+}
+
 /*paris,belleville */
 .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f3f3f3;
   text-align: center;
   padding: 20px;
@@ -303,6 +367,9 @@ header .header__logo {
   list-style-type: none;
   padding-left: 0px;
 }
+.footer .footer__list a:hover {
+  text-decoration: underline;
+}
 .footer .footer__list .footer__listElt {
   padding-bottom: 10px;
 }
@@ -330,6 +397,11 @@ header .header__logo {
   height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 991px) {
+  .menu__img img {
+    height: 338px;
+  }
 }
 
 .menu .menu__container {
@@ -396,6 +468,11 @@ header .header__logo {
 .menu .submenu {
   display: flex;
 }
+@media screen and (max-width: 1024px) {
+  .menu .submenu {
+    flex-direction: column;
+  }
+}
 .menu .submenu .diff__submenu {
   flex-basis: 42%;
   padding: 0 11px;
@@ -413,6 +490,22 @@ header .header__logo {
   position: absolute;
   bottom: -3px;
   left: 0;
+}
+.menu .submenu .diff__submenu .delay-1 {
+  -webkit-animation: submenu-animated 1000ms 100ms;
+          animation: submenu-animated 1000ms 100ms;
+}
+.menu .submenu .diff__submenu .delay-2 {
+  -webkit-animation: submenu-animated 1000ms 250ms;
+          animation: submenu-animated 1000ms 250ms;
+}
+.menu .submenu .diff__submenu .delay-3 {
+  -webkit-animation: submenu-animated 1000ms 450ms;
+          animation: submenu-animated 1000ms 450ms;
+}
+.menu .submenu .diff__submenu .delay-4 {
+  -webkit-animation: submenu-animated 1000ms 650ms;
+          animation: submenu-animated 1000ms 650ms;
 }
 .menu .submenu .diff__submenu .submenu__title {
   display: flex;
@@ -462,16 +555,4 @@ header .header__logo {
 }
 .menu .explorer--order {
   padding: 57px;
-}
-
-/*mobile*/
-@media screen and (max-width: 767px) {
-  .container {
-    width: 100%;
-    margin: auto;
-  }
-  .container .tuto__steps {
-    padding-left: 0;
-    flex-direction: column;
-  }
 }/*# sourceMappingURL=main.css.map */

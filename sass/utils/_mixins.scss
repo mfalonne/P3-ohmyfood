@@ -58,14 +58,19 @@
         transform: translate(-50%) scale(1.1);
     }    
 }
-@mixin check {
-    @keyframes check{
-        0%{
-            transform: rotate(-270);
-        }
-        100%{
-            transform: rotate(0);
-        }
+@mixin submenu-animated {
+    .delay-1{
+        animation: submenu-animated 1000ms  100ms;
+    }
+    .delay-2{
+        animation: submenu-animated 1000ms  250ms;
+    }
+    .delay-3{
+        animation: submenu-animated 1000ms  450ms;
+    }
+    .delay-4{
+        animation: submenu-animated 1000ms  650ms;
     }
     
 }
+
