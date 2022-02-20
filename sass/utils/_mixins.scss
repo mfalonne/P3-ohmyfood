@@ -37,8 +37,8 @@
     bottom: 25px;
     transform: translate(-50%);
     color: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
     opacity: 1;
     transition: all 200ms;    
 }

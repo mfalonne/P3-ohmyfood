@@ -59,10 +59,35 @@
     transform: rotate(360deg);
   }
 }
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  -webkit-animation: loader 200ms 2s forwards;
+          animation: loader 200ms 2s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356DC;
+  border-radius: 50%;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -98,25 +123,6 @@ header .header__logo {
     padding-bottom: 3px;
   }
 }
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f3f3f3;
-  height: 100vh;
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.8;
-  -webkit-animation: loader 200ms 3s forwards;
-          animation: loader 200ms 3s forwards;
-  transform-origin: top;
-}
-.loader i {
-  -webkit-animation: spin 3s infinite linear;
-          animation: spin 3s infinite linear;
-}
-
 /*paris,belleville */
 .city {
   display: flex;
@@ -124,7 +130,7 @@ header .header__logo {
   justify-content: center;
   background-color: #f3f3f3;
   text-align: center;
-  padding: 20px;
+  /*padding: 20px;*/
 }
 .city .city_icon {
   font-size: 20px;
@@ -549,6 +555,10 @@ header .header__logo {
 .menu .submenu .diff__submenu .submenu__title .submenu__clic i.fas.fa-check-circle {
   color: white;
   font-size: 30px;
+}
+.menu .submenu .diff__submenu .submenu__title .submenu__clic i.fas.fa-check-circle:hover {
+  -webkit-animation: check 1s;
+          animation: check 1s;
 }
 .menu .submenu .diff__submenu .submenu__title:hover .submenu__clic {
   margin-right: 0;

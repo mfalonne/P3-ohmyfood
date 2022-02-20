@@ -1,0 +1,28 @@
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: loader 200ms 2s forwards;
+    transform-origin: top;
+    &::after{
+        content: "";
+        animation: spin 1s infinite linear;
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $colour-primary;
+        border-radius: 50%;
+        animation-iteration-count: 2;
+
+    }
+        
+}

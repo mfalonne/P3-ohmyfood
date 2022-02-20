@@ -4,7 +4,8 @@
   "description": "Mon projet trois ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss sass/main.css"
+    "sass": "sass --watch sass/main.scss sass/main.css",
+    "prefix":"postcss ./sass/main.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "falonne",
   "license": "ISC",
+  "browserslist":"last 4 versions",
   "bugs": {
     "url": "https://github.com/mfalonne/muyombotshibolafalonne_3_10012022/issues"
   },
