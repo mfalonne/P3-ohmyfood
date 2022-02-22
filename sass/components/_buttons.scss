@@ -1,0 +1,19 @@
+/* bouton explorer*/ 
+.explorer{
+    text-align: center;
+    background-color:#f6f6f6;
+    padding: 20px 0;
+    & .explorer__btn{
+        @include button;
+        &:hover{
+            @include zoom;
+            cursor: pointer;
+            box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+            opacity: 0.9;
+        } 
+    }
+}
+.explorer--order{
+    padding: 57px;
+   
+}
