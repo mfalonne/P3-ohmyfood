@@ -24,6 +24,14 @@
   100% {
     transform: scale(1);
   }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 @keyframes submenu-animated {
   0% {
@@ -31,6 +39,14 @@
   }
   100% {
     transform: scale(1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 @-webkit-keyframes loader {
@@ -233,6 +249,9 @@ header .header__logo {
   transform: scale(1.001);
   cursor: pointer;
   background-color: #f9ecf9;
+}
+.tuto .tuto__steps .tuto__step:hover .tuto__icon {
+  color: #9356DC;
 }
 .tuto .tuto__steps .tuto__step .tuto__icon {
   margin: 3px 15px;

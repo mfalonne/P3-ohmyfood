@@ -65,6 +65,9 @@
                 @include zoom;
                 cursor: pointer;
                 background-color: #f9ecf9;
+                & .tuto__icon{
+                    color:  $colour-primary;
+                }
                 
             }
             & .tuto__icon{
